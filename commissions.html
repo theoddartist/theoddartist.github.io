@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Commissions — The Odd Artist</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Lato:wght@400;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Commissions — The Odd Artist</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
 :root{--cream:#F8F7DE;--carbon:#111811;--green:#172218;--brick:#7F261C;--brown:#402B1E;--gold:#D8B96B}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--carbon);color:var(--cream);font-family:Lato,Arial,sans-serif}
 a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}
@@ -26,100 +28,156 @@ header{position:sticky;top:0;z-index:20;padding:22px 5vw;background:rgba(17,24,1
 footer{border-top:1px solid rgba(248,247,222,.12);padding:38px 5vw;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}.footer-brand{font-family:"Bodoni Moda",serif;font-size:1.35rem;text-transform:none}.footer-links{display:flex;gap:24px}
 @media(max-width:980px){.hero{grid-template-columns:1fr}.hero-image{min-height:440px}.types{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}}
 @media(max-width:700px){.header-inner{display:flex;flex-direction:column;text-align:center}.home-name{order:2}.brand{order:1}.header-inner nav{order:3}.brand{display:block;margin-bottom:13px}nav{justify-content:center;gap:10px 16px}.hero{padding-top:55px}.hero-image{min-height:380px}.type-card{grid-template-columns:1fr}.type-img{min-height:280px}.steps{grid-template-columns:1fr}.form{grid-template-columns:1fr}.field.full,.submit{grid-column:auto}}
-</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="irl-gallery.html">IRL Gallery</a><a href="shop.html">Shop</a></nav></div></header>
+.type-img>a{position:absolute;inset:0;display:block}.type-title-link{color:inherit;text-decoration:none;transition:color .25s ease}.type-title-link:hover{color:var(--brick)}
+
+.commission-slideshow{position:relative}
+.commission-slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .55s ease}
+.commission-slide.active{opacity:1;pointer-events:auto}
+.commission-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82)}
+.commission-slide:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(17,24,17,.62))}
+.slide-arrow{position:absolute;z-index:5;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid rgba(248,247,222,.35);background:rgba(17,24,17,.55);color:var(--cream);font-size:2rem;line-height:1;cursor:pointer;transition:.25s}
+.slide-arrow:hover{background:var(--brick);border-color:var(--brick)}
+.slide-prev{left:14px}.slide-next{right:14px}
+.slide-dots{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:6;display:flex;gap:7px}
+.slide-dot{width:7px;height:7px;border-radius:50%;border:1px solid rgba(248,247,222,.8);background:transparent;padding:0;cursor:pointer}
+.slide-dot.active{background:var(--cream)}
+
+.copyright{flex-basis:100%;width:100%;padding-top:16px;margin-top:4px;border-top:1px solid rgba(248,247,222,.08);color:#92998d;font-size:.64rem;line-height:1.6;letter-spacing:.04em;text-transform:none}.footer-brand{transition:color .25s ease}.footer-brand:hover{color:var(--brick)}
+.footer-links a{transition:color .25s ease}.footer-links a:hover{color:var(--brick)}
+</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="shop.html">Shop</a></nav></div></header>
 <main>
 <section class="hero">
-  <div>
-    <div class="kicker">Custom Artwork</div>
-    <h1>Commissions</h1>
-    <p>Original artwork made for a specific person, place, project, or idea. This page will eventually show final commission examples, pricing guidance, and current availability.</p>
-    <a class="cta" href="#contact">Start an inquiry</a>
-  </div>
-  <div class="hero-image">
-    <img src="art-10-portrait.jpg" alt="Commission example placeholder">
-    <div class="hero-note">Prototype commission example</div>
-  </div>
+<div>
+<div class="kicker">Custom Artwork</div>
+<h1>Commissions</h1>
+<p>Bring your idea to life with original artwork for a specific person, place, or project. Have a memory captured in paint, or together, we can create something new! The sky’s the limit!</p>
+<a class="cta" href="contact.html">Start an inquiry</a>
+</div>
+<div aria-label="Previous commission examples" class="hero-image commission-slideshow">
+<a class="commission-slide active" href="art-22.html">
+<img alt="Wedding Ring commissioned artwork" src="art-22-the-ring.jpg"/>
+<div class="hero-note">Wedding Ring · Commission</div>
+</a><a class="commission-slide" href="art-13.html">
+<img alt="Pencil Portrait 1 commission example" src="art-13-pencil-portrait.jpg"/>
+<div class="hero-note">Pencil Portrait 1 · Commission Example</div>
+</a>
+<a class="commission-slide" href="art-25.html">
+<img alt="JRR Tolkien and CS Lewis commissioned drawing part 1" src="art-25-commission-series-i.jpg"/>
+<div class="hero-note">JRR Tolkien &amp; C.S. Lewis · Commission Series</div>
+</a>
+<a class="commission-slide" href="art-26.html">
+<img alt="JRR Tolkien and CS Lewis commissioned drawing part 2" src="art-26-commission-series-ii.jpg"/>
+<div class="hero-note">JRR Tolkien &amp; C.S. Lewis · Commission Series</div>
+</a>
+<a class="commission-slide" href="art-27.html">
+<img alt="JRR Tolkien and CS Lewis commissioned drawing part 3" src="art-27-commission-series-iii.jpg"/>
+<div class="hero-note">JRR Tolkien &amp; C.S. Lewis · Commission Series</div>
+</a>
+<button aria-label="Previous commission" class="slide-arrow slide-prev" type="button">‹</button>
+<button aria-label="Next commission" class="slide-arrow slide-next" type="button">›</button>
+<div aria-label="Commission slideshow navigation" class="slide-dots"></div>
+</div>
 </section>
-
 <section class="section">
-  <div class="section-head">
-    <div class="kicker">Types of work</div>
-    <h2>What I can make</h2>
-    <p>These categories are the starting structure. We can change, combine, or rename them once your actual commission portfolio is organized.</p>
-  </div>
-
-  <div class="types">
-    <article class="type-card">
-      <div class="type-img"><img src="art-10-portrait.jpg" alt=""></div>
-      <div class="type-copy">
-        <div class="mini">Commission Type 01</div>
-        <h3>Portraits</h3>
-        <p>Painted portraits and character-focused work for individuals, families, gifts, and personal projects.</p>
-        <a class="cta" href="#contact">Ask about portraits</a>
-      </div>
-    </article>
-
-    <article class="type-card">
-      <div class="type-img"><img src="art-09-ocean.jpg" alt=""></div>
-      <div class="type-copy">
-        <div class="mini">Commission Type 02</div>
-        <h3>Landscapes &amp; Fine Art</h3>
-        <p>Original paintings based on meaningful places, memories, references, or a specific atmosphere you want captured.</p>
-        <a class="cta" href="#contact">Ask about fine art</a>
-      </div>
-    </article>
-
-    <article class="type-card">
-      <div class="type-img"><img src="art-11-diner-rat.jpg" alt=""></div>
-      <div class="type-copy">
-        <div class="mini">Commission Type 03</div>
-        <h3>Illustration</h3>
-        <p>Illustration work for personal, editorial, publishing, or visual storytelling projects.</p>
-        <a class="cta" href="#contact">Ask about illustration</a>
-      </div>
-    </article>
-
-    <article class="type-card">
-      <div class="type-img"><img src="art-12-fire-truck.jpg" alt=""></div>
-      <div class="type-copy">
-        <div class="mini">Commission Type 04</div>
-        <h3>Murals &amp; Large Work</h3>
-        <p>Large-scale pieces for walls, businesses, interiors, events, and other projects that need artwork built for a space.</p>
-        <a class="cta" href="#contact">Ask about large work</a>
-      </div>
-    </article>
-  </div>
+<div class="section-head">
+<div class="kicker">Types of work</div>
+<h2>What I can make</h2>
+</div>
+<div class="types">
+<article class="type-card">
+<div class="type-img"><a href="gallery.html"><img alt="" src="art-10-portrait.jpg"/></a></div>
+<div class="type-copy">
+<h3><a class="type-title-link" href="gallery.html">Portraits</a></h3>
+<p>Portraits and character-focused work for individuals, families, gifts, and personal projects. Painted in oil or drawn in pencil.</p>
+<a class="cta" href="contact.html">Ask about portraits</a>
+</div>
+</article>
+<article class="type-card">
+<div class="type-img"><a href="gallery.html"><img alt="" src="art-09-ocean.jpg"/></a></div>
+<div class="type-copy">
+<h3><a class="type-title-link" href="gallery.html">Landscapes &amp; Fine Art</a></h3>
+<p>Original oil paintings based on meaningful places, memories, references, or a specific atmosphere you want captured.</p>
+<a class="cta" href="contact.html">Ask about fine art</a>
+</div>
+</article>
+<article class="type-card">
+<div class="type-img"><a href="gallery.html"><img alt="" src="art-31-fisheye-subway.jpg"/></a></div>
+<div class="type-copy">
+<h3><a class="type-title-link" href="gallery.html">Illustration</a></h3>
+<p>Illustration work for personal, editorial, publishing, or visual storytelling projects.</p>
+<a class="cta" href="contact.html">Ask about illustration</a>
+</div>
+</article>
+<article class="type-card">
+<div class="type-img"><a href="gallery.html"><img alt="" src="art-12-fire-truck.jpg"/></a></div>
+<div class="type-copy">
+<h3><a class="type-title-link" href="gallery.html">Murals &amp; Large Work</a></h3>
+<p>Large-scale pieces for walls, businesses, interiors, events, and other projects that need artwork built for a space.</p>
+<a class="cta" href="contact.html">Ask about large work</a>
+</div>
+</article>
+</div>
 </section>
-
 <section class="process">
-  <div class="process-inner">
-    <div class="kicker" style="text-align:center;color:#e3d8cb">How it works</div>
-    <h2>The Commission Process</h2>
-    <div class="steps">
-      <div class="step"><div class="num">01</div><h3>Tell me the idea</h3><p>Send the type of work, reference material, approximate size, deadline, and what you want the piece to feel like.</p></div>
-      <div class="step"><div class="num">02</div><h3>Scope &amp; quote</h3><p>We clarify the project, materials, timeline, and price before work begins.</p></div>
-      <div class="step"><div class="num">03</div><h3>Create the work</h3><p>I develop the piece and communicate at the points where feedback is useful for the project.</p></div>
-      <div class="step"><div class="num">04</div><h3>Finish &amp; deliver</h3><p>The finished work is prepared for pickup, shipping, installation, or the final delivery method we agreed on.</p></div>
-    </div>
-  </div>
+<div class="process-inner">
+<div class="kicker" style="text-align:center;color:#e3d8cb">How it works</div>
+<h2>The Commission Process</h2>
+<div class="steps">
+<div class="step"><div class="num">01</div><h3>Tell me the idea</h3><p>Send the type of work, deadline, approximate size, any reference material, techniques or look you have in mind, and most importantly, your idea or desired feel for the piece.</p></div>
+<div class="step"><div class="num">02</div><h3>Scope &amp; quote</h3><p>Together, we’ll clarify the project, materials, timeline, price, and revision expectations before work begins. Once the details are agreed upon, a contract will outline the deadline, expected work, included revisions, and any other project-specific terms. Projects over $300 require a 50% deposit before work begins.</p></div>
+<div class="step"><div class="num">03</div><h3>Create the work</h3><p>I develop the piece and communicate when feedback is most useful. Work-in-progress photos will be sent at key stages to make sure we’re on the same page before moving forward.</p></div>
+<div class="step"><div class="num">04</div><h3>Finish &amp; deliver</h3><p>Once the piece is complete and approved, I’ll prepare it for the final delivery method we agreed on. The timeline will depend on the medium, size, and any necessary drying or finishing time.</p></div>
+</div>
+</div>
 </section>
-
 <section class="contact" id="contact">
-  <div>
-    <div class="kicker">Get in touch</div>
-    <h2>Have something in mind?</h2>
-    <p>Send the basics of the project and we can figure out whether it is a good fit. You do not need to have every detail decided before reaching out.</p>
-    <p class="note">Prototype form only — it does not send yet. We can connect this to a real email/form service when the site is ready to publish.</p>
-  </div>
-
-  <form class="form" onsubmit="return false">
-    <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
-    <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
-    <div class="field"><label>Commission type</label><select><option>Portrait</option><option>Landscape / Fine Art</option><option>Illustration</option><option>Mural / Large Work</option><option>Other</option></select></div>
-    <div class="field"><label>Approximate budget</label><input type="text" placeholder="Optional"></div>
-    <div class="field full"><label>Tell me about the project</label><textarea placeholder="Idea, size, deadline, references, location, or anything else useful..."></textarea></div>
-    <button class="submit" type="submit">Send Inquiry</button>
-  </form>
+<div>
+<div class="kicker">Get in touch!</div>
+<h2>Let’s create something together!</h2>
+<p>Send me the basic idea of your project, and we can go from there. There’s no need to have all the details decided yet; we can figure them out together and create something we’re both happy with! Reach out with any questions about commissions, my creative process, or paintings I have available for sale.</p>
+</div>
+<form action="https://formsubmit.co/theoddartist42@gmail.com" class="form" method="POST"><input name="_subject" type="hidden" value="New Commission Inquiry — The Odd Artist"/><input name="_template" type="hidden" value="table"/>
+<div class="field"><label>Name</label><input name="name" placeholder="Your name" type="text"/></div>
+<div class="field"><label>Email</label><input name="email" placeholder="you@example.com" required="" type="email"/></div>
+<div class="field"><label>Type of commission</label><select name="commission_type"><option>Portrait</option><option>Landscape / Fine Art</option><option>Illustration</option><option>Mural / Large Work</option><option>Other</option></select></div>
+<div class="field"><label>Approximate budget</label><input name="budget" placeholder="Optional" type="text"/></div>
+<div class="field full"><label>What’s your vision?</label><textarea name="message" placeholder="Idea, size, deadline, references, location, or anything else useful..."></textarea></div>
+<button class="submit" type="submit">Let’s start creating</button>
+</form>
 </section>
-</main><footer><div><div class="footer-brand">The Odd Artist</div><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="#">Etsy</a><a href="#">Instagram</a><a href="#contact">Contact</a></div></footer>
+</main><footer><div><a class="footer-brand" href="index.html">The Odd Artist</a><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Etsy</a><a href="https://www.instagram.com/theoddartist42/" rel="noopener" target="_blank">Instagram</a><a href="contact.html">Contact</a></div><div class="copyright">© 2026 Juan Pablo Cardona. All artwork © Juan Pablo Cardona. All rights reserved. No reproduction or use without permission.</div></footer>
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.commission-slide')];
+  const prev=document.querySelector('.slide-prev');
+  const next=document.querySelector('.slide-next');
+  const dotsWrap=document.querySelector('.slide-dots');
+  if(!slides.length) return;
+  let index=0;
+  let timer;
+
+  const dots=slides.map((_,i)=>{
+    const b=document.createElement('button');
+    b.type='button';
+    b.className='slide-dot'+(i===0?' active':'');
+    b.setAttribute('aria-label','Show commission '+(i+1));
+    b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(i);restart();});
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function show(i){
+    index=(i+slides.length)%slides.length;
+    slides.forEach((s,n)=>s.classList.toggle('active',n===index));
+    dots.forEach((d,n)=>d.classList.toggle('active',n===index));
+  }
+  function restart(){
+    clearInterval(timer);
+    timer=setInterval(()=>show(index+1),4500);
+  }
+  prev.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(index-1);restart();});
+  next.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(index+1);restart();});
+  restart();
+})();
+</script>
 </body></html>

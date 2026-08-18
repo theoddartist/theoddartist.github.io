@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop — The Odd Artist</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Lato:wght@400;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Shop — The Odd Artist</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
 :root{--cream:#F8F7DE;--carbon:#111811;--green:#172218;--brick:#7F261C;--brown:#402B1E;--gold:#D8B96B}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--carbon);color:var(--cream);font-family:Lato,Arial,sans-serif}
 a{color:inherit;text-decoration:none}
@@ -19,55 +21,60 @@ nav{display:flex;justify-self:end;gap:clamp(14px,2.5vw,34px);flex-wrap:wrap;font
 footer{border-top:1px solid rgba(248,247,222,.12);padding:38px 5vw;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}.footer-brand{font-family:"Bodoni Moda",serif;font-size:1.35rem;text-transform:none}.footer-links{display:flex;gap:24px}
 @media(max-width:980px){.hero{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}.cat-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.header-inner{display:flex;flex-direction:column;text-align:center}.brand{order:1}.home-name{order:2}.header-inner nav{order:3}nav{justify-content:center;gap:10px 16px}.hero{padding-top:55px}.hero-art{min-height:360px}.products,.cat-grid{grid-template-columns:1fr}.product-img{height:auto}.product-img img{height:auto;display:block}}
-</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="irl-gallery.html">IRL Gallery</a><a href="shop.html">Shop</a></nav></div></header>
+.copyright{flex-basis:100%;width:100%;padding-top:16px;margin-top:4px;border-top:1px solid rgba(248,247,222,.08);color:#92998d;font-size:.64rem;line-height:1.6;letter-spacing:.04em;text-transform:none}.footer-brand{transition:color .25s ease}.footer-brand:hover{color:var(--brick)}
+.footer-links a{transition:color .25s ease}.footer-links a:hover{color:var(--brick)}
+
+.cat-grid{grid-template-columns:repeat(3,1fr)}
+.prints-coming h3{transition:opacity .25s ease}
+.prints-coming:hover h3{font-size:0}
+.prints-coming:hover h3:after{content:"Coming Soon!";font-size:2rem}
+.hero>div:first-child{align-self:start;padding-top:12px}
+@media(max-width:980px){.cat-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.cat-grid{grid-template-columns:1fr}}
+</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="shop.html">Shop</a></nav></div></header>
 <main>
 <section class="hero">
-  <div>
-    <div class="kicker">Original art &amp; more</div>
-    <h1>Shop</h1>
-    <p>Placeholder introduction: shop original paintings, prints, and other artwork by Juan Pablo Cardona. Selected work can be previewed here, with purchasing handled through The Odd Artist Studio on Etsy.</p>
-    <a class="button" href="#etsy">Visit the Etsy Shop</a>
-  </div>
-  <div class="hero-art">
-    <img src="art-03-glowing-forest.jpg" alt="">
-    <img src="art-06-pear-still-life.jpg" alt="">
-    <img src="art-13-pencil-portrait.jpg" alt="">
-  </div>
+<div>
+<div class="kicker">Original Paintings &amp; more</div>
+<h1>Shop</h1>
+<p>Original oil and gouache paintings, prints, and illustrations are available through my Etsy shop, The Odd Artist Studio. This website is primarily a gallery for my work, but if you see an original you’re interested in, feel free to reach out and purchase directly from me. I’ll be updating my Etsy regularly with new originals and prints as they become available.</p>
+<a class="button" href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Visit the Etsy Shop</a>
+</div>
+<div class="hero-art">
+<img alt="Golden Gate Bridge Study" src="art-15-bridge-study.jpg"/>
+<img alt="Pear and Plum" src="art-06-pear-still-life.jpg"/>
+<img alt="Head of Chrysès" src="art-19-head-of-chryses.jpg"/>
+</div>
 </section>
-
 <section class="section">
-  <div class="section-head">
-    <div class="kicker">Featured</div>
-    <h2>Available Work</h2>
-    <p>Placeholder products for layout testing. Later these can show pieces currently listed in your Etsy shop and link directly to each listing.</p>
-  </div>
-  <div class="products">
-    <article class="product"><div class="product-img"><img src="art-06-pear-still-life.jpg" alt=""></div><div class="product-copy"><div class="product-type">Original Oil Painting</div><h3>Original Painting Placeholder</h3><p>Placeholder size · Oil on panel · Original artwork</p><div class="price">$—</div></div></article>
-    <article class="product"><div class="product-img"><img src="art-09-ocean.jpg" alt=""></div><div class="product-copy"><div class="product-type">Original Painting</div><h3>Landscape Placeholder</h3><p>Placeholder size · Original artwork · Unframed</p><div class="price">$—</div></div></article>
-    <article class="product"><div class="product-img"><img src="art-13-pencil-portrait.jpg" alt=""></div><div class="product-copy"><div class="product-type">Print / Fine Art</div><h3>Print Placeholder</h3><p>Placeholder print details · Multiple sizes coming later</p><div class="price">$—</div></div></article>
-  </div>
+<div class="section-head">
+<div class="kicker">Featured</div>
+<h2>Available Work</h2>
+<p>A few featured paintings that are available on the shop!</p>
+</div>
+<div class="products">
+<article class="product"><div class="product-img"><img alt="Pear and Plum" src="art-06-pear-still-life.jpg"/></div><div class="product-copy"><div class="product-type">Original Oil Painting</div><h3>Pear and Plum</h3><p>5x7in · Oil on canvas board · Original oil painting</p><div class="price">$30</div></div></article>
+<article class="product"><div class="product-img"><img alt="Ghost Ship" src="art-02-boat-night.jpg"/></div><div class="product-copy"><div class="product-type">Original Painting</div><h3>Ghost Ship</h3><p>8x10in · Oil on wooden board · Original oil painting</p><div class="price">$120</div></div></article>
+<article class="product"><div class="product-img"><img alt="Oceanside Sunset Plein Air" src="art-14-sunset-ocean.jpg"/></div><div class="product-copy"><div class="product-type">Print / Fine Art</div><h3>Oceanside Sunset Plein Air</h3><p>4x6in · Gouache on paper · Original painting</p><div class="price">$30</div></div></article>
+</div>
 </section>
-
 <section class="categories">
-  <div class="categories-inner">
-    <div class="kicker" style="text-align:center;color:#e5d9ca">Browse</div>
-    <h2>Shop by Collection</h2>
-    <div class="cat-grid">
-      <a class="cat" href="#etsy"><img src="art-02-boat-night.jpg" alt=""><h3>Originals</h3></a>
-      <a class="cat" href="#etsy"><img src="art-14-sunset-ocean.jpg" alt=""><h3>Prints</h3></a>
-      <a class="cat" href="#etsy"><img src="art-01-plein-air-trees.jpg" alt=""><h3>Small Works</h3></a>
-      <a class="cat" href="#etsy"><img src="art-11-diner-rat.jpg" alt=""><h3>More Coming</h3></a>
-    </div>
-  </div>
+<div class="categories-inner">
+<div class="kicker" style="text-align:center;color:#e5d9ca">Browse</div>
+<h2>Shop by Collection</h2>
+<div class="cat-grid">
+<a class="cat" href="#etsy"><img alt="" src="art-02-boat-night.jpg"/><h3>Originals</h3></a>
+<a class="cat prints-coming" href="#etsy"><img alt="Head of Chrysès" src="art-19-head-of-chryses.jpg"/><h3>Prints</h3></a>
+<a class="cat" href="#etsy"><img alt="Oceanside Sunset Plein Air" src="art-14-sunset-ocean.jpg"/><h3>Small Works</h3></a>
+</div>
+</div>
 </section>
-
 <section class="etsy" id="etsy">
-  <div class="etsy-box">
-    <div class="kicker">The Odd Artist Studio</div>
-    <h2>Purchase through Etsy</h2>
-    <p>For now, Etsy will handle checkout, payment, shipping, and the live product listings. This website acts as the curated storefront and portfolio, so you do not need to maintain two separate online stores.</p>
-    <a class="button" href="#" target="_blank" rel="noopener">Open Etsy Shop</a>
-    <div class="note">Placeholder link — we will connect your actual Etsy shop URL during the final content/link pass.</div>
-  </div>
+<div class="etsy-box">
+<div class="kicker">The Odd Artist Studio</div>
+<h2>Purchase through Etsy</h2>
+<p>For now, Etsy will handle checkout, payment, shipping, and the live product listings. This website acts as the curated storefront and portfolio.</p>
+<a class="button" href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Open Etsy Shop</a>
+</div>
 </section>
-</main><footer><div><div class="footer-brand">The Odd Artist</div><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="shop.html">Etsy</a><a href="social.html">Instagram</a><a href="commissions.html#contact">Contact</a></div></footer></body></html>
+</main><footer><div><a class="footer-brand" href="index.html">The Odd Artist</a><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Etsy</a><a href="https://www.instagram.com/theoddartist42/" rel="noopener" target="_blank">Instagram</a><a href="contact.html">Contact</a></div><div class="copyright">© 2026 Juan Pablo Cardona. All artwork © Juan Pablo Cardona. All rights reserved. No reproduction or use without permission.</div></footer></body></html>

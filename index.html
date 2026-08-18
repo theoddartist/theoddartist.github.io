@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Odd Artist</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{--cream:#F8F7DE;--carbon:#111811;--green:#172218;--brick:#7F261C;--brown:#402B1E}
 *{box-sizing:border-box} html{scroll-behavior:smooth}
@@ -22,7 +23,7 @@ nav a:hover{color:var(--brick)}
 .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,8,5,.28),rgba(5,8,5,.04) 38%,rgba(5,8,5,.62) 85%,var(--carbon))}
 .hero-content{position:relative;z-index:2;text-align:center;padding:120px 24px 60px}
-.kicker{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px}
+.kicker{font-size:clamp(.95rem,1.8vw,1.35rem);letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px}
 .hero h1{font-size:clamp(3.4rem,8.5vw,8rem);line-height:.88;letter-spacing:.025em;margin:0;text-shadow:0 4px 28px rgba(0,0,0,.45)}
 .rule{width:100px;height:1px;background:rgba(248,247,222,.8);margin:30px auto 23px}
 .hero p{font-size:1.08rem;line-height:1.6;margin:0;text-shadow:0 2px 14px rgba(0,0,0,.5)}
@@ -52,22 +53,25 @@ footer{border-top:1px solid rgba(248,247,222,.12);padding:38px 5vw;display:flex;
 .footer-brand{font-family:"Bodoni Moda",serif;font-size:1.35rem;text-transform:none}.footer-links{display:flex;gap:24px}
 @media(max-width:820px){.header-inner{display:flex;flex-direction:column;text-align:center}.home-name{order:2}.brand{order:1}.header-inner nav{order:3}.brand{display:block;margin-bottom:15px}nav{justify-content:center;gap:11px 18px;font-size:.66rem}.hero{min-height:78vh}.cards{grid-template-columns:1fr 1fr}.news{grid-template-columns:1fr}}
 @media(max-width:540px){.cards{grid-template-columns:1fr}.card{min-height:205px}.signup{flex-direction:column}}
+.enter-gallery-link{color:inherit;text-decoration:none;transition:color .25s ease}.enter-gallery-link:hover{color:var(--brick)}
+.copyright{flex-basis:100%;width:100%;padding-top:16px;margin-top:4px;border-top:1px solid rgba(248,247,222,.08);color:#92998d;font-size:.64rem;line-height:1.6;letter-spacing:.04em;text-transform:none}.footer-brand{transition:color .25s ease}.footer-brand:hover{color:var(--brick)}
+.footer-links a{transition:color .25s ease}.footer-links a:hover{color:var(--brick)}
 </style>
 </head>
 <body>
-<header><div class="header-inner"><a class="brand" href="#">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="irl-gallery.html">IRL Gallery</a><a href="shop.html">Shop</a></nav></div></header>
+<header><div class="header-inner"><a class="brand" href="#">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="shop.html">Shop</a></nav></div></header>
 <main>
-<section class="hero"><img src="forest-hero.jpg" alt="Glowing forest painting"><div class="hero-content"><div class="kicker">Welcome to</div><h1>THE ODD ARTIST</h1><div class="rule"></div><p>Traditional painting &amp; illustration<br>by Juan Pablo Cardona.</p></div></section>
-<section class="explore" id="gallery"><div class="explore-title"><div class="kicker">Explore</div><h2>Enter the Gallery</h2></div>
+<section class="hero"><img alt="Glowing forest painting" src="forest-hero.jpg"/><div class="hero-content"><div class="kicker">Welcome to</div><h1>THE ODD ARTIST</h1><div class="rule"></div><p>Traditional painting &amp; illustration<br/>by Juan Pablo Cardona.</p></div></section>
+<section class="explore" id="gallery"><div class="explore-title"><h2><a class="enter-gallery-link" href="gallery.html">Enter the Gallery</a></h2></div>
 <div class="cards">
-<a class="card" href="gallery.html"><img src="art-09-ocean.jpg" alt=""><div class="card-content"><h3>Gallery</h3><span>Explore the work →</span></div></a>
-<a class="card" href="commissions.html"><img src="art-02-boat-night.jpg" alt=""><div class="card-content"><h3>Commissions</h3><span>View commission work →</span></div></a>
-<a class="card" href="about.html"><img src="about-main.png" alt=""><div class="card-content"><h3>About</h3><span>Meet the artist →</span></div></a>
-<a class="card" href="irl-gallery.html"><img src="art-01-plein-air-trees.jpg" alt=""><div class="card-content"><h3>IRL Gallery</h3><span>Exhibitions &amp; shows →</span></div></a>
-<a class="card" href="social.html"><img src="art-11-diner-rat.jpg" alt=""><div class="card-content"><h3>Social</h3><span>Follow along →</span></div></a>
-<a class="card" href="commissions.html#contact"><img src="art-06-pear-still-life.jpg" alt=""><div class="card-content"><h3>Contact</h3><span>Get in touch →</span></div></a>
+<a class="card" href="gallery.html"><img alt="" src="art-09-ocean.jpg"/><div class="card-content"><h3>Gallery</h3><span>Explore the work →</span></div></a>
+<a class="card" href="commissions.html"><img alt="" src="art-02-boat-night.jpg"/><div class="card-content"><h3>Commissions</h3><span>View commission work →</span></div></a>
+<a class="card" href="about.html"><img alt="" src="about-main.png"/><div class="card-content"><h3>About</h3><span>Meet the artist →</span></div></a>
+<a class="card" href="shop.html"><img alt="" src="art-29-green-apples.jpg"/><div class="card-content"><h3>Shop</h3><span>Browse available work →</span></div></a>
+<a class="card" href="social.html"><img alt="" src="art-11-diner-rat.jpg"/><div class="card-content"><h3>Social</h3><span>Follow along →</span></div></a>
+<a class="card" href="contact.html"><img alt="" src="art-06-pear-still-life.jpg"/><div class="card-content"><h3>Contact</h3><span>Get in touch →</span></div></a>
 </div></section>
-<section class="news"><div><div class="kicker">Stay in touch</div><h2>Newsletter</h2><p>Coming soon. Presign up to hear about new work, exhibitions, and projects.</p></div><form class="signup" onsubmit="return false"><input type="email" placeholder="Your email address"><button>Presign Up</button></form></section>
+<section class="news"><div><div class="kicker">Keep up to date!</div><h2>Newsletter</h2><p>Coming soon! Pre-sign up to hear about new work, projects, exhibitions, and to get a glimpse into my creative process.</p></div><form class="signup" onsubmit="return false"><input placeholder="Your email address" type="email"/><button>Presign Up</button></form></section>
 </main>
-<footer id="shop"><div><div class="footer-brand">The Odd Artist</div><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="#">Etsy</a><a href="#">Instagram</a><a href="#">Contact</a></div></footer>
+<footer id="shop"><div><a class="footer-brand" href="index.html">The Odd Artist</a><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Etsy</a><a href="https://www.instagram.com/theoddartist42/" rel="noopener" target="_blank">Instagram</a><a href="contact.html">Contact</a></div><div class="copyright">© 2026 Juan Pablo Cardona. All artwork © Juan Pablo Cardona. All rights reserved. No reproduction or use without permission.</div></footer>
 </body></html>

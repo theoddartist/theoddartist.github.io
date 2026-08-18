@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Glowing Forest — The Odd Artist</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Lato:wght@400;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Glowing Forest — The Odd Artist</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
 :root{--cream:#F8F7DE;--carbon:#111811;--green:#172218;--brick:#7F261C;--brown:#402B1E}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--carbon);color:var(--cream);font-family:Lato,Arial,sans-serif}
 a{color:inherit;text-decoration:none}button{font:inherit}
@@ -20,13 +22,57 @@ footer{border-top:1px solid rgba(248,247,222,.12);padding:38px 5vw;display:flex;
 .art-stage{min-height:68vh;display:flex;align-items:center;justify-content:center}.art-stage img{max-width:100%;max-height:78vh;object-fit:contain;box-shadow:0 18px 60px rgba(0,0,0,.22)}
 .detail-copy{max-width:440px}.detail-copy h1{font-size:clamp(2.7rem,5vw,5rem);margin-bottom:15px}.meta{color:#bfc4b7;line-height:1.8;margin-bottom:30px}.note{color:#92998d;line-height:1.7;font-size:.92rem}.pager{display:flex;justify-content:space-between;gap:20px;margin-top:42px;padding-top:22px;border-top:1px solid rgba(248,247,222,.14);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase}.pager a{color:var(--cream);transition:color .2s ease,opacity .2s ease}.pager .prev:hover{color:var(--brick)}.pager .next:hover{color:#D8B96B}.pager .center:hover{color:var(--brick)}
 @media(max-width:800px){.header-inner{display:flex;flex-direction:column;text-align:center}.home-name{order:2}.brand{order:1}.header-inner nav{order:3}.brand{display:block;margin-bottom:13px}nav{justify-content:center;gap:10px 16px}.page-head{padding-top:55px}.detail{grid-template-columns:1fr;padding-top:35px}.art-stage{min-height:auto}.art-stage img{max-height:65vh}.detail-copy{max-width:none}}
-</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="irl-gallery.html">IRL Gallery</a><a href="shop.html">Shop</a></nav></div></header>
-<main class="detail"><div class="art-stage"><img src="art-03-glowing-forest.jpg" alt="Glowing Forest"></div><section class="detail-copy"><div class="kicker">Oil Paintings</div><h1>Glowing Forest</h1>
-<div class="meta">Juan Pablo Cardona<br><em>Medium, dimensions, and year to be added.</em></div>
-<p class="note">This is a prototype artwork page. Once the final titles and details are ready, this space can hold the exact medium, size, year, availability, and an optional short note about the piece.</p>
-<div class="pager"><a class="prev" href="art-02.html">← Previous</a><a class="center" href="gallery.html">Gallery</a><a class="next" href="art-04.html">Next →</a></div></section></main><footer><div><div class="footer-brand">The Odd Artist</div><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="#">Etsy</a><a href="#">Instagram</a><a href="index.html#commissions">Contact</a></div></footer>
+
+.art-stage img{cursor:zoom-in}
+.zoom-overlay{position:fixed;inset:0;z-index:1000;background:rgba(3,5,3,.96);display:none;overflow:auto;cursor:zoom-out;padding:28px}
+.zoom-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+.zoom-overlay img{width:auto;height:auto;max-width:none;max-height:none;box-shadow:0 20px 80px rgba(0,0,0,.5);margin:auto}
+.zoom-hint{position:fixed;z-index:1001;right:22px;top:18px;color:var(--cream);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;opacity:.72;pointer-events:none;display:none}
+.zoom-overlay.open+.zoom-hint{display:block}
+@media(max-width:800px){.zoom-overlay{padding:16px}.zoom-overlay img{min-width:1100px}}
+
+.copyright{flex-basis:100%;width:100%;padding-top:16px;margin-top:4px;border-top:1px solid rgba(248,247,222,.08);color:#92998d;font-size:.64rem;line-height:1.6;letter-spacing:.04em;text-transform:none}.footer-brand{transition:color .25s ease}.footer-brand:hover{color:var(--brick)}
+.footer-links a{transition:color .25s ease}.footer-links a:hover{color:var(--brick)}
+</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="shop.html">Shop</a></nav></div></header>
+<main class="detail"><div class="art-stage"><img alt="Glowing Forest" src="art-03-glowing-forest.jpg"/></div><section class="detail-copy"><div class="kicker">Oil Painting</div><h1>Glowing Forest</h1>
+<div class="meta">Juan Pablo Cardona<br/><em>Oil Paint · Wooden Board · 10 × 8 in · 2026</em></div>
+<p class="note"><strong>Available · $120</strong></p>
+<div class="pager"><a class="prev" href="art-02.html">← Previous</a><a class="center" href="gallery.html">Gallery</a><a class="next" href="art-09.html">Next →</a></div></section></main><footer><div><a class="footer-brand" href="index.html">The Odd Artist</a><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Etsy</a><a href="https://www.instagram.com/theoddartist42/" rel="noopener" target="_blank">Instagram</a><a href="index.html#commissions">Contact</a></div><div class="copyright">© 2026 Juan Pablo Cardona. All artwork © Juan Pablo Cardona. All rights reserved. No reproduction or use without permission.</div></footer>
 <script>
 (function () {
+  const stageImg = document.querySelector('.art-stage img');
+  if (!stageImg) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'zoom-overlay';
+  overlay.setAttribute('aria-hidden','true');
+  const zoomImg = document.createElement('img');
+  zoomImg.src = stageImg.src;
+  zoomImg.alt = stageImg.alt;
+  overlay.appendChild(zoomImg);
+  const hint = document.createElement('div');
+  hint.className = 'zoom-hint';
+  hint.textContent = 'Click or Esc to close';
+  document.body.appendChild(overlay);
+  document.body.appendChild(hint);
+
+  function openZoom(){
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    // Render at natural resolution when possible; if smaller than viewport, gently enlarge.
+    const vw = window.innerWidth - 56;
+    const natural = zoomImg.naturalWidth || stageImg.naturalWidth || vw;
+    zoomImg.style.width = Math.max(natural, vw) + 'px';
+  }
+  function closeZoom(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+  stageImg.addEventListener('click', openZoom);
+  overlay.addEventListener('click', closeZoom);
+
   function goToGallery() {
     const galleryUrl = new URL('gallery.html', window.location.href);
     window.location.assign(galleryUrl.href);
@@ -45,9 +91,15 @@ footer{border-top:1px solid rgba(248,247,222,.12);padding:38px 5vw;display:flex;
     if (isEscape) {
       event.preventDefault();
       event.stopPropagation();
-      goToGallery();
+      if (overlay.classList.contains('open')) {
+        closeZoom();
+      } else {
+        goToGallery();
+      }
       return;
     }
+
+    if (overlay.classList.contains('open')) return;
 
     if (event.key === 'ArrowLeft' || event.code === 'ArrowLeft') {
       event.preventDefault();

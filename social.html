@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Social — The Odd Artist</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Lato:wght@400;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Social — The Odd Artist</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
 :root{--cream:#F8F7DE;--carbon:#111811;--green:#172218;--brick:#7F261C;--brown:#402B1E;--gold:#D8B96B}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--carbon);color:var(--cream);font-family:Lato,Arial,sans-serif}
 a{color:inherit;text-decoration:none}button,input{font:inherit}
@@ -23,61 +25,64 @@ nav{display:flex;justify-self:end;gap:clamp(14px,2.5vw,34px);flex-wrap:wrap;font
 footer{border-top:1px solid rgba(248,247,222,.12);padding:38px 5vw;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}.footer-brand{font-family:"Bodoni Moda",serif;font-size:1.35rem;text-transform:none}.footer-links{display:flex;gap:24px}
 @media(max-width:980px){.hero,.newsletter-inner{grid-template-columns:1fr}.hero-collage{min-height:440px}.post-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.header-inner{display:flex;flex-direction:column;text-align:center}.brand{order:1}.home-name{order:2}.header-inner nav{order:3}nav{justify-content:center;gap:10px 16px}.hero{padding-top:55px}.hero-collage{grid-template-columns:1fr 1fr;min-height:360px}.post-grid,.contact-grid{grid-template-columns:1fr}.signup{flex-direction:column}}
-</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="irl-gallery.html">IRL Gallery</a><a href="shop.html">Shop</a></nav></div></header>
+.copyright{flex-basis:100%;width:100%;padding-top:16px;margin-top:4px;border-top:1px solid rgba(248,247,222,.08);color:#92998d;font-size:.64rem;line-height:1.6;letter-spacing:.04em;text-transform:none}.footer-brand{transition:color .25s ease}.footer-brand:hover{color:var(--brick)}
+.footer-links a{transition:color .25s ease}.footer-links a:hover{color:var(--brick)}
+
+.post-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.post-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.post-grid{grid-template-columns:1fr}}
+</style></head><body><header><div class="header-inner"><a class="brand" href="index.html">THE ODD ARTIST</a><a class="home-name" href="index.html">Juan Pablo Cardona</a><nav><a href="gallery.html">Gallery</a><a href="commissions.html">Commissions</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="shop.html">Shop</a></nav></div></header>
 <main>
 <section class="hero">
-  <div>
-    <div class="kicker">Follow along</div>
-    <h1>Social</h1>
-    <div class="handle">@theoddartist42</div>
-    <p>Placeholder introduction: a short note about following works in progress, finished paintings, plein air sessions, exhibitions, and other updates.</p>
-    <a class="button" href="#" target="_blank" rel="noopener">Visit Instagram</a>
-  </div>
-  <div class="hero-collage">
-    <img src="about-main.png" alt="">
-    <img src="art-03-glowing-forest.jpg" alt="">
-    <img src="art-09-ocean.jpg" alt="">
-  </div>
+<div>
+<div class="kicker">Follow the journey</div>
+<h1>Instagram</h1>
+<div class="handle">@theoddartist42</div>
+<p>Stay up to date, get a glimpse into my process, see works in progress, and catch random sketches and paintings that don’t make it to the gallery or Etsy. Follow along on my painting outings, where I make little vlogs showing where I’m going, the spot I choose, how I set up, what palette I’m using, and some random commentary along the way.</p>
+<a class="button" href="https://www.instagram.com/theoddartist42/" rel="noopener" target="_blank">Visit Instagram</a>
+</div>
+<div class="hero-collage">
+<img alt="" src="about-main.png"/>
+<img alt="" src="art-03-glowing-forest.jpg"/>
+<img alt="" src="art-09-ocean.jpg"/>
+</div>
 </section>
-
 <section class="feed">
-  <div class="section-head">
-    <div class="kicker">Recent work</div>
-    <h2>From the Feed</h2>
-    <p>Placeholder Instagram-style grid. These can later become linked images, selected recent posts, or a simpler curated social gallery.</p>
-  </div>
-  <div class="post-grid">
-    <a class="post" href="#"><img src="art-01-plein-air-trees.jpg" alt=""></a>
-    <a class="post" href="#"><img src="art-11-diner-rat.jpg" alt=""></a>
-    <a class="post" href="#"><img src="art-10-portrait.jpg" alt=""></a>
-    <a class="post" href="#"><img src="art-08-clouds.jpg" alt=""></a>
-    <a class="post" href="#"><img src="art-13-pencil-portrait.jpg" alt=""></a>
-    <a class="post" href="#"><img src="art-02-boat-night.jpg" alt=""></a>
-  </div>
+<div class="section-head">
+<div class="kicker">Recent work</div>
+<h2>From the Gram</h2>
+<p>Some of my favorite posts: a mix of painting vlogs and posts featuring my work.</p>
+</div>
+<div class="post-grid">
+<a class="post" href="https://www.instagram.com/p/DcMeiu7yRv5/" rel="noopener" target="_blank"><img alt="Floating Castle" src="art-32-floating-castle.jpg"/></a>
+<a class="post" href="https://www.instagram.com/p/Dbohw_pyBRl/" rel="noopener" target="_blank"><img alt="Glowing Forest" src="art-03-glowing-forest.jpg"/></a>
+<a class="post" href="https://www.instagram.com/p/DbWirP4hiey/" rel="noopener" target="_blank"><img alt="Ghost Ship" src="art-02-boat-night.jpg"/></a>
+<a class="post" href="https://www.instagram.com/p/DPPfCcUAb8D/" rel="noopener" target="_blank"><img alt="Old Truck - Plein Air" src="art-12-fire-truck.jpg"/></a>
+<a class="post" href="https://www.instagram.com/p/DPengjyCfqh/" rel="noopener" target="_blank"><img alt="Oceanside Sunset Plein Air" src="art-14-sunset-ocean.jpg"/></a>
+<a class="post" href="https://www.instagram.com/p/Db6o6_ThqZ9/" rel="noopener" target="_blank"><img alt="Taking the L" src="art-31-fisheye-subway.jpg"/></a>
+</div>
 </section>
-
 <section class="newsletter">
-  <div class="newsletter-inner">
-    <div>
-      <div class="kicker" style="color:#f1e5da">Stay in touch</div>
-      <h2>Newsletter</h2>
-      <p>Coming soon. Presign up for occasional updates about new work, exhibitions, commissions, and projects.</p>
-    </div>
-    <form class="signup" onsubmit="return false;">
-      <input type="email" placeholder="Your email address" aria-label="Email address">
-      <button type="submit">Presign Up</button>
-    </form>
-  </div>
+<div class="newsletter-inner">
+<div>
+<div class="kicker" style="color:#f1e5da">Keep up to date!</div>
+<h2>Newsletter</h2>
+<p>Coming soon! Pre-sign up to hear about new work, projects, exhibitions, and to get a glimpse into my creative process.</p>
+</div>
+<form class="signup" onsubmit="return false;">
+<input aria-label="Email address" placeholder="Your email address" type="email"/>
+<button type="submit">Presign Up</button>
+</form>
+</div>
 </section>
-
 <section class="contact">
-  <div class="section-head">
-    <div class="kicker">Keep exploring</div>
-    <h2>Stay Connected</h2>
-  </div>
-  <div class="contact-grid">
-    <a class="contact-card" href="gallery.html"><img src="art-03-glowing-forest.jpg" alt=""><div class="contact-copy"><h3>View My Work</h3><span>Enter the gallery →</span></div></a>
-    <a class="contact-card" href="commissions.html#contact"><img src="about-beach.png" alt=""><div class="contact-copy"><h3>Contact</h3><span>Get in touch →</span></div></a>
-  </div>
+<div class="section-head">
+<div class="kicker">Keep exploring</div>
+<h2>Stay Connected</h2>
+</div>
+<div class="contact-grid">
+<a class="contact-card" href="gallery.html"><img alt="" src="art-03-glowing-forest.jpg"/><div class="contact-copy"><h3>View My Work</h3><span>Enter the gallery →</span></div></a>
+<a class="contact-card" href="contact.html"><img alt="" src="about-beach.png"/><div class="contact-copy"><h3>Contact</h3><span>Get in touch →</span></div></a>
+</div>
 </section>
-</main><footer><div><div class="footer-brand">The Odd Artist</div><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="#">Etsy</a><a href="#">Instagram</a><a href="commissions.html#contact">Contact</a></div></footer></body></html>
+</main><footer><div><a class="footer-brand" href="index.html">The Odd Artist</a><div style="margin-top:7px;color:#979f94;text-transform:none;letter-spacing:.02em">Traditional painting &amp; illustration by Juan Pablo Cardona.</div></div><div class="footer-links"><a href="https://www.etsy.com/shop/TheOddArtistStudio" rel="noopener" target="_blank">Etsy</a><a href="https://www.instagram.com/theoddartist42/" rel="noopener" target="_blank">Instagram</a><a href="contact.html">Contact</a></div><div class="copyright">© 2026 Juan Pablo Cardona. All artwork © Juan Pablo Cardona. All rights reserved. No reproduction or use without permission.</div></footer></body></html>
